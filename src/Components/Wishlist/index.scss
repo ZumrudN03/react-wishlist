@@ -1,0 +1,138 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --main-bg-color: white;
+  --main-text-color: black;
+}
+
+.darkMode{
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  transition: all 600ms;
+}
+body{
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+}
+
+.container {
+  display: flex;
+  .storeCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 20px 0px;
+    .cardList {
+      width: 300px;
+      min-height: 350px;
+      border: 3px solid #FF5B22;
+      padding: 20px;
+      position: relative;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      .title {
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .price {
+        font-size: 14px;
+      }
+      .desc {
+        font-size: 14px;
+      }
+      .category {
+        background-color: #FF5B22;
+        color: white;
+        width: 150px;
+        font-weight: 600;
+        font-size: 17;
+        margin: auto;
+        text-align: center;
+        border-radius: 5px;
+      }
+      .fa-heart {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 8px;
+        border: 1px solid black;
+        border-radius: 50%;
+        transition: 300ms;
+        cursor: pointer;
+        &:hover {
+          color: #FF5B22;
+        }
+      }
+    }
+  }
+  .wishlist {
+    border: 1px solid #FF5B22;
+    margin: 20px 0px;
+    .cardList {
+      display: flex;
+      align-items: center;
+      width: 500px;
+      height: 200px;
+      gap: 20px;
+      margin: 0px 20px;
+      .wishlist-img {
+        width: 100px;
+        height: 100px;
+        img{
+            object-fit: contain;
+        }
+      }
+      .card-list {
+        button {
+          margin-right: 10px;
+          border:1px solid #FF5B22;
+          padding: 5px 10px;
+          border-radius: 5px;
+          color: #FF5B22;
+          background-color: #ff592228;
+          cursor: pointer;
+          
+        }
+        .wishlist-title{
+            font-size: 15px;
+            color: #FF5B22;
+        }
+        .wishlist-price{
+            font-size: 14px;
+        }
+        .wishlist-desc{
+            font-size: 14px;
+        }
+        .wishlist-category{
+            font-size: 14px;
+        }
+        i{
+            color: #FF5B22;
+            border: 1px solid #FF9130;
+            border-radius: 50%;
+            padding: 6px;
+            cursor: pointer;
+        }
+      }
+    }
+  }
+  .theme{
+    position: absolute;
+    padding: 5px 10px;
+    color: inherit;
+    border: 2px solid #FF5B22;
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
+    background-color: #ff592228;
+  }
+}
